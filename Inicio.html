@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Gringo_Yank</title>
+    <title>Menú Desplegable Ferretería</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Menú de navegación -->
     <nav class="navbar">
-        <div class="logo">
-            <a href="#">El Gringo_Yank</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="carrito.html">Carrito de Compra</a></li>
-            <li><a href="electronicos.html">Electrónicos</a></li>
-            <li><a href="herramientas.html">Herramientas</a></li>
-            <li><a href="refrigeracion.html">Refrigeración</a></li>
+        <div class="logo">El Gringo_Yank</div>
+        <div class="menu-icon" id="menu-icon">☰</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#carrito">Carrito de Compra</a></li>
+            <li><a href="#electronicos">Electrónicos</a></li>
+            <li><a href="#herramientas">Herramientas</a></li>
+            <li><a href="#refrigeracion">Refrigeración</a></li>
         </ul>
     </nav>
 
-    <!-- Contenido de las secciones -->
+    <!-- Secciones -->
     <section id="carrito">
         <h2>Carrito de Compra</h2>
         <p>Aquí puedes ver los productos que has agregado a tu carrito.</p>
     </section>
-
     <section id="electronicos">
         <h2>Electrónicos</h2>
         <p>Encuentra una amplia variedad de productos electrónicos.</p>
     </section>
-
     <section id="herramientas">
         <h2>Herramientas</h2>
         <p>Explora nuestra selección de herramientas para todos tus proyectos.</p>
     </section>
-
     <section id="refrigeracion">
         <h2>Refrigeración</h2>
         <p>Descubre equipos de refrigeración para tus necesidades.</p>
     </section>
+
+    <!-- Script para la funcionalidad del menú -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
