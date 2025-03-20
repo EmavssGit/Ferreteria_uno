@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos del menú de navegación responsivo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a4a4a; /* Gris oscuro */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo a {
+    color: #FFA500; /* Naranja */
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #FFA500; /* Naranja */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #1E90FF; /* Azul */
+}
+
+/* Menú hamburguesa para móviles */
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    color: #FFA500;
+    cursor: pointer;
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 80px 20px;
+    margin-top: 60px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #e0e0e0; /* Gris claro */
+}
+
+section h2 {
+    font-size: 2em;
+    color: #1E90FF; /* Azul */
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Efecto suave al hacer scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #4a4a4a;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
